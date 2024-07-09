@@ -4,7 +4,7 @@ Selamat datang di repositori Web OSIS 96 Jakarta! Proyek ini bertujuan untuk men
 
 ## Alasan Dokumen Ini Dibuat
 
-Dokumentasi ini disusun untuk memberikan panduan yang jelas dan terstruktur tentang penggunaan dan pengelolaan berbagai fitur dalam aplikasi Web OSIS 96 Jakarta. Setiap fitur dijelaskan secara rinci dalam dokumen terpisah untuk memudahkan navigasi dan pemahaman. Dengan adanya dokumentasi ini, diharapkan pengguna dapat dengan mudah memahami dan memanfaatkan setiap fitur yang tersedia secara optimal.
+Dokumentasi ini disusun untuk memberikan panduan yang jelas dan terstruktur tentang penggunaan dan pengelolaan berbagai fitur dalam aplikasi Web OSIS 96 Jakarta. Setiap fitur dijelaskan secara rinci dalam dokumen terpisah untuk memudahkan navigasi dan pemahaman. Dengan adanya dokumentasi ini, diharapkan pembaca dapat dengan mudah memahami dan memanfaatkan setiap fitur yang tersedia secara optimal.
 
 ## Daftar Fitur
 
