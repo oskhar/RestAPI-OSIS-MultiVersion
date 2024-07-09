@@ -1,0 +1,134 @@
+models:
+  angkatan:
+    id: bigIncrements
+    tahun: year
+    created_at: timestamps
+    updated_at: timestamps
+
+  kegiatan:
+    id: bigIncrements
+    nama: string
+    foto_kegiatan: string
+    deskripsi: text
+    catatan_untuk_osis: text
+    tanggal_mulai: date
+    tanggal_selesai: date
+    lokasi: string
+    status: enum:akan datang,berlangsung,selesai
+    created_at: timestamps
+    updated_at: timestamps
+
+  notifikasi:
+    id: bigIncrements
+    user_id: foreignId:users
+    kegiatan_id: foreignId:kegiatan
+    created_at: timestamps
+    updated_at: timestamps
+
+  ekstrakurikuler:
+    id: bigIncrements
+    nama: string
+    poster_ekstrakurikuler: string
+    deskripsi: text
+    penanggung_jawab_id: foreignId:users
+    created_at: timestamps
+    updated_at: timestamps
+
+  jadwal_ekstrakurikuler:
+    id: bigIncrements
+    ekstrakurikuler_id: foreignId:ekstrakurikuler
+    hari: enum:'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'
+    waktu_mulai: time
+    waktu_selesai: time
+    lokasi: string
+    created_at: timestamps
+    updated_at: timestamps
+
+  prestasi:
+    id: bigIncrements
+    ekstrakurikuler_id: foreignId:ekstrakurikuler
+    nama_prestasi: string
+    tanggal: date
+    deskripsi: text
+    created_at: timestamps
+    updated_at: timestamps
+
+  edukasi:
+    id: bigIncrements
+    judul: string
+    konten: text
+    file_path: string:nullable
+    created_at: timestamps
+    updated_at: timestamps
+
+  pemilihan_ketua:
+    id: bigIncrements
+    periode: string
+    tanggal_mulai: date
+    tanggal_selesai: date
+    created_at: timestamps
+    updated_at: timestamps
+
+  kandida_ketua:
+    id: bigIncrements
+    pemilihan_id: foreignId:pemilihan_ketua
+    user_id: foreignId:users
+    poster_visimisi: string
+    created_at: timestamps
+    updated_at: timestamps
+
+  kandida_wakil:
+    id: bigIncrements
+    kandida_ketua_id: foreignId:kandida_ketua
+    user_id: foreignId:users
+    created_at: timestamps
+    updated_at: timestamps
+
+  suara:
+    id: bigIncrements
+    pemilihan_id: foreignId:pemilihan_ketua
+    kandidat_id: foreignId:kandidat_ketua
+    pemilih_id: foreignId:users
+    created_at: timestamps
+    updated_at: timestamps
+
+  jabatan:
+    id: bigIncrements
+    nama_jabatan: string
+    level: string
+    created_at: timestamps
+    updated_at: timestamps
+
+relations:
+  anggota:
+    belongsTo:
+      - users
+      - angkatan
+
+  notifikasi:
+    belongsTo:
+      - users
+      - kegiatan
+
+  jadwal_ekstrakurikuler:
+    belongsTo:
+      - ekstrakurikuler
+
+  prestasi:
+    belongsTo:
+      - ekstrakurikuler
+
+  kandidat_ketua:
+    belongsTo:
+      - pemilihan_ketua
+      - users
+
+  suara:
+    belongsTo:
+      - pemilihan_ketua
+      - kandidat_ketua
+      - users
+
+  struktur_organisasi:
+    belongsTo:
+      - users

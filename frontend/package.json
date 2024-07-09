@@ -22,6 +22,7 @@
     "roboto-fontface": "^0.10.0",
     "simplebar": "^6.2.7",
     "simplebar-vue": "^2.3.5",
+    "sweetalert2": "^11.6.13",
     "vue": "^3.3.4",
     "vue-flatpickr-component": "11.0.5",
     "vue-prism-component": "^2.0.0",
