@@ -14,7 +14,7 @@ const tabs = [
     tab: "read",
   },
   {
-    title: "buat",
+    title: "tambahkan",
     icon: "bx-book-add",
     tab: "create",
   },

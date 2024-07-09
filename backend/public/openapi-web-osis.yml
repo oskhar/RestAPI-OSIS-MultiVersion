@@ -1,0 +1,501 @@
+openapi: 3.0.1
+info:
+  title: OSIS SMAN 96 JAKARTA API
+  description: API documentation for OSIS SMAN 96 JAKARTA web application
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api
+    description: Local server
+paths:
+  /angkatan:
+    get:
+      summary: Retrieve a list of angkatan
+      tags:
+        - Angkatan
+      responses:
+        "200":
+          description: A list of angkatan
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Angkatan"
+    post:
+      summary: Create a new angkatan
+      tags:
+        - Angkatan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Angkatan"
+      responses:
+        "201":
+          description: Angkatan created successfully
+  /angkatan/{id}:
+    get:
+      summary: Retrieve a specific angkatan
+      tags:
+        - Angkatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The angkatan ID
+      responses:
+        "200":
+          description: Angkatan details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Angkatan"
+    put:
+      summary: Update a specific angkatan
+      tags:
+        - Angkatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The angkatan ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Angkatan"
+      responses:
+        "200":
+          description: Angkatan updated successfully
+    delete:
+      summary: Delete a specific angkatan
+      tags:
+        - Angkatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The angkatan ID
+      responses:
+        "204":
+          description: Angkatan deleted successfully
+
+  /edukasi:
+    get:
+      summary: Retrieve a list of edukasi
+      tags:
+        - Edukasi
+      responses:
+        "200":
+          description: A list of edukasi
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Edukasi"
+    post:
+      summary: Create a new edukasi
+      tags:
+        - Edukasi
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Edukasi"
+      responses:
+        "201":
+          description: Edukasi created successfully
+  /edukasi/{id}:
+    get:
+      summary: Retrieve a specific edukasi
+      tags:
+        - Edukasi
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The edukasi ID
+      responses:
+        "200":
+          description: Edukasi details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Edukasi"
+    put:
+      summary: Update a specific edukasi
+      tags:
+        - Edukasi
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The edukasi ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Edukasi"
+      responses:
+        "200":
+          description: Edukasi updated successfully
+    delete:
+      summary: Delete a specific edukasi
+      tags:
+        - Edukasi
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The edukasi ID
+      responses:
+        "204":
+          description: Edukasi deleted successfully
+
+  /ekstrakurikuler:
+    get:
+      summary: Retrieve a list of ekstrakurikuler
+      tags:
+        - Ekstrakurikuler
+      responses:
+        "200":
+          description: A list of ekstrakurikuler
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Ekstrakurikuler"
+    post:
+      summary: Create a new ekstrakurikuler
+      tags:
+        - Ekstrakurikuler
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ekstrakurikuler"
+      responses:
+        "201":
+          description: Ekstrakurikuler created successfully
+  /ekstrakurikuler/{id}:
+    get:
+      summary: Retrieve a specific ekstrakurikuler
+      tags:
+        - Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ekstrakurikuler ID
+      responses:
+        "200":
+          description: Ekstrakurikuler details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ekstrakurikuler"
+    put:
+      summary: Update a specific ekstrakurikuler
+      tags:
+        - Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ekstrakurikuler ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ekstrakurikuler"
+      responses:
+        "200":
+          description: Ekstrakurikuler updated successfully
+    delete:
+      summary: Delete a specific ekstrakurikuler
+      tags:
+        - Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ekstrakurikuler ID
+      responses:
+        "204":
+          description: Ekstrakurikuler deleted successfully
+
+  /jabatan:
+    get:
+      summary: Retrieve a list of jabatan
+      tags:
+        - Jabatan
+      responses:
+        "200":
+          description: A list of jabatan
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Jabatan"
+    post:
+      summary: Create a new jabatan
+      tags:
+        - Jabatan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Jabatan"
+      responses:
+        "201":
+          description: Jabatan created successfully
+  /jabatan/{id}:
+    get:
+      summary: Retrieve a specific jabatan
+      tags:
+        - Jabatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jabatan ID
+      responses:
+        "200":
+          description: Jabatan details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Jabatan"
+    put:
+      summary: Update a specific jabatan
+      tags:
+        - Jabatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jabatan ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Jabatan"
+      responses:
+        "200":
+          description: Jabatan updated successfully
+    delete:
+      summary: Delete a specific jabatan
+      tags:
+        - Jabatan
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jabatan ID
+      responses:
+        "204":
+          description: Jabatan deleted successfully
+
+  /jadwal_ekstrakurikuler:
+    get:
+      summary: Retrieve a list of jadwal ekstrakurikuler
+      tags:
+        - Jadwal Ekstrakurikuler
+      responses:
+        "200":
+          description: A list of jadwal ekstrakurikuler
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/JadwalEkstrakurikuler"
+    post:
+      summary: Create a new jadwal ekstrakurikuler
+      tags:
+        - Jadwal Ekstrakurikuler
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JadwalEkstrakurikuler"
+      responses:
+        "201":
+          description: Jadwal Ekstrakurikuler created successfully
+  /jadwal_ekstrakurikuler/{id}:
+    get:
+      summary: Retrieve a specific jadwal ekstrakurikuler
+      tags:
+        - Jadwal Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jadwal ekstrakurikuler ID
+      responses:
+        "200":
+          description: Jadwal Ekstrakurikuler details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JadwalEkstrakurikuler"
+    put:
+      summary: Update a specific jadwal ekstrakurikuler
+      tags:
+        - Jadwal Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jadwal ekstrakurikuler ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JadwalEkstrakurikuler"
+      responses:
+        "200":
+          description: Jadwal Ekstrakurikuler updated successfully
+    delete:
+      summary: Delete a specific jadwal ekstrakurikuler
+      tags:
+        - Jadwal Ekstrakurikuler
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The jadwal ekstrakurikuler ID
+      responses:
+        "204":
+          description: Jadwal Ekstrakurikuler deleted successfully
+
+components:
+  schemas:
+    Angkatan:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nama_angkatan:
+          type: string
+        tahun_masuk:
+          type: integer
+        tahun_lulus:
+          type: integer
+      required:
+        - nama_angkatan
+        - tahun_masuk
+        - tahun_lulus
+
+    Edukasi:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nama_edukasi:
+          type: string
+        deskripsi:
+          type: string
+        tanggal:
+          type: string
+          format: date
+      required:
+        - nama_edukasi
+        - deskripsi
+        - tanggal
+
+    Ekstrakurikuler:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nama_ekstrakurikuler:
+          type: string
+        deskripsi:
+          type: string
+        ketua:
+          type: string
+        jadwal_latihan:
+          type: string
+      required:
+        - nama_ekstrakurikuler
+        - deskripsi
+        - ketua
+        - jadwal_latihan
+
+    Jabatan:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nama_jabatan:
+          type: string
+        deskripsi:
+          type: string
+      required:
+        - nama_jabatan
+        - deskripsi
+
+    JadwalEkstrakurikuler:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nama_ekstrakurikuler:
+          type: string
+        hari:
+          type: string
+        waktu:
+          type: string
+      required:
+        - nama_ekstrakurikuler
+        - hari
+        - waktu

@@ -13,6 +13,14 @@ export const routes = [
         component: () => import("@/pages/berita-acara.vue"),
       },
       {
+        path: "galeri",
+        component: () => import("@/pages/galeri.vue"),
+      },
+      {
+        path: "pemilihan-ketua",
+        component: () => import("@/pages/pemilihan-ketua.vue"),
+      },
+      {
         path: "account-settings",
         component: () => import("@/pages/account-settings.vue"),
       },
@@ -21,16 +29,8 @@ export const routes = [
         component: () => import("@/pages/typography.vue"),
       },
       {
-        path: "icons",
-        component: () => import("@/pages/icons.vue"),
-      },
-      {
         path: "cards",
         component: () => import("@/pages/cards.vue"),
-      },
-      {
-        path: "tables",
-        component: () => import("@/pages/tables.vue"),
       },
       {
         path: "form-layouts",

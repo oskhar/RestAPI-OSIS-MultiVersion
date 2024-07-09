@@ -42,7 +42,15 @@
         size="50"
       ></VProgressCircular>
     </VCol>
-    <!-- 👉 Popular Uses Of The Internet -->
+
+    <VCol v-else-if="dataBerita.length == 0" cols="12">
+      <h2
+        class="text-center text-secondary"
+        style="line-height: 300%; margin-top: 10%"
+      >
+        berita masih kosong !
+      </h2>
+    </VCol>
     <VCol v-else v-for="(data, index) in dataBerita" cols="12" md="4" sm="12">
       <VCard>
         <VImg :src="data.gambar" cover style="height: 280px">
