@@ -4,24 +4,40 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
+        Schema::create('jabatans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_jabatan');
+            $table->string('level');
+            $table->timestamps();
+        });
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nama');
             $table->string('email')->unique();
-            $table->string('media_sosial')->nullable();
-            $table->unsignedBigInteger('jabatan_id');
             $table->timestamp('email_verified_at')->nullable();
+            $table->enum('role', ['OSIS', 'Siswa']);
             $table->string('password');
+            $table->string('whatsapp')->nullable();
             $table->rememberToken();
             $table->timestamps();
+        });
 
+        Schema::create("osis", function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('jabatan_id');
+            $table->string('instagram')->nullable();
+            $table->string('media_sosial')->nullable();
+            $table->string('moto')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('jabatan_id')->references('id')->on('jabatans')->onDelete('cascade');
         });
 
