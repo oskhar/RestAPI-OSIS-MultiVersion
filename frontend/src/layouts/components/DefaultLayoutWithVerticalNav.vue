@@ -1,10 +1,10 @@
 <script setup>
-import NavItems from '@/layouts/components/NavItems.vue'
-import logo from '@images/logo.svg?raw'
-import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
-import Footer from '@/layouts/components/Footer.vue'
-import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
-import UserProfile from '@/layouts/components/UserProfile.vue'
+import NavItems from "@/layouts/components/NavItems.vue";
+import logo from "@images/logo.svg?raw";
+import VerticalNavLayout from "@layouts/components/VerticalNavLayout.vue";
+import Footer from "@/layouts/components/Footer.vue";
+import NavbarThemeSwitcher from "@/layouts/components/NavbarThemeSwitcher.vue";
+import UserProfile from "@/layouts/components/UserProfile.vue";
 </script>
 
 <template>
@@ -23,7 +23,7 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
         <!-- 👉 Search -->
         <div
           class="d-flex align-center cursor-pointer ms-lg-n3"
-          style="user-select: none;"
+          style="user-select: none"
         >
           <!-- 👉 Search Trigger button -->
           <IconBtn>
@@ -57,19 +57,13 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
     </template>
 
     <template #vertical-nav-header="{ toggleIsOverlayNavActive }">
-      <RouterLink
-        to="/"
-        class="app-logo app-title-wrapper"
-      >
+      <RouterLink to="/" class="app-logo app-title-wrapper">
         <!-- eslint-disable vue/no-v-html -->
-        <div
-          class="d-flex"
-          v-html="logo"
-        />
+        <!-- <div class="d-flex" v-html="logo" /> -->
         <!-- eslint-enable -->
 
-        <h1 class="app-logo-title">
-          sneat
+        <h1>
+          <font style="color: rgb(var(--v-theme-primary))">OSIS</font> SMAN 96
         </h1>
       </RouterLink>
 

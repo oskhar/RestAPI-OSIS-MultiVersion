@@ -1,5 +1,14 @@
 export const routes = [
-  { path: "/", redirect: "/dashboard" },
+  {
+    path: "/",
+    component: () => import("@/layouts/guest/guest-layout.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("@/pages/guest-home-page.vue"),
+      },
+    ],
+  },
   {
     path: "/",
     component: () => import("@/layouts/default.vue"),
