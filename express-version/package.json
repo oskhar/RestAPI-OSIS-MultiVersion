@@ -1,0 +1,28 @@
+{
+  "name": "api-web-osis",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oskhar/Web-OSIS-ExpressVersion.git"
+  },
+  "author": "Muhamad Oskhar Mubarok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oskhar/Web-OSIS-ExpressVersion/issues"
+  },
+  "homepage": "https://github.com/oskhar/Web-OSIS-ExpressVersion#readme",
+  "description": "",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.5",
+    "nodemon": "^3.1.4"
+  }
+}
